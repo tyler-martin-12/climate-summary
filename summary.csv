@@ -1,3 +1,4 @@
-place,mean_wind,mean_temp,mean_humidity,mean_cloud_cover
-london,8.29,53.22,0.745,98
-denver,5.13,52.16,0.488,264
+place,mean_wind,mean_temp,mean_humidity,mean_cloud_cover,n_sunny
+denver,5.13,52.16,0.488,0.368,264
+london,8.29,53.22,0.745,0.64,98
+christchurch,9.14,54.15,0.762,0.581,142

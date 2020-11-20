@@ -133,7 +133,7 @@ def initialize_summary():
         return path
 
     with open(path,'w') as f:
-        f.write('place,mean_wind,mean_temp,mean_humidity,mean_cloud_cover')
+        f.write('place,mean_wind,mean_temp,mean_humidity,mean_cloud_cover,n_sunny')
         f.write('\n')
     return path
 
@@ -144,5 +144,6 @@ def save_summary(summary,place):
                 f"{summary['mean_wind']},"
                 f"{summary['mean_temp']},"
                 f"{summary['mean_humidity']},"
+                f"{summary['mean_cc']},"
                 f"{summary['n_sunny']}")
         f.write('\n')
