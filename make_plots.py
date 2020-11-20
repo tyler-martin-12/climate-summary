@@ -60,14 +60,14 @@ def plot_single_place(daily_mean, place, plot_dir):
         _ = axes[idx].legend(loc=1)
         _ = axes[idx].grid()
         title_text = f'Mean {name} over 2019 for {place.upper()}'
-        _ = axes[idx].set_title(title_text,size=15)
+        _ = axes[idx].set_title(title_text, size=15)
 
     fig.set_size_inches(20, 20)
     path = f'{plot_dir}/{place}'
-    plt.savefig(path) #, dpi=150)
+    plt.savefig(path)
 
 
-def comparison_plot(means, plot_dir, freq='daily',rolling=14):
+def comparison_plot(means, plot_dir, freq='daily', rolling=14):
     fig, axes = plt.subplots(4, 1)
 
     names = ['Temperature', 'Wind Speed', 'Humidity', 'Cloud Cover']
@@ -83,11 +83,11 @@ def comparison_plot(means, plot_dir, freq='daily',rolling=14):
         _ = axes[idx].legend(loc=1)
         _ = axes[idx].grid()
         title_text = f'{rolling} day rolling {name} over 2019'
-        _ = axes[idx].set_title(title_text,size=15)
+        _ = axes[idx].set_title(title_text, size=15)
 
     fig.set_size_inches(20, 20)
     path = f'{plot_dir}/comparison'
-    plt.savefig(path) #, dpi=150)
+    plt.savefig(path)
 
 
 def get_color_dict():
