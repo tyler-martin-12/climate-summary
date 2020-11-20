@@ -64,7 +64,7 @@ def plot_single_place(daily_mean, place, plot_dir):
 
     fig.set_size_inches(20, 20)
     path = f'{plot_dir}/{place}'
-    plt.savefig(path, dpi=150)
+    plt.savefig(path) #, dpi=150)
 
 
 def comparison_plot(means, plot_dir, freq='daily',rolling=14):
@@ -87,7 +87,7 @@ def comparison_plot(means, plot_dir, freq='daily',rolling=14):
 
     fig.set_size_inches(20, 20)
     path = f'{plot_dir}/comparison'
-    plt.savefig(path, dpi=150)
+    plt.savefig(path) #, dpi=150)
 
 
 def get_color_dict():
