@@ -77,7 +77,7 @@ def comparison_plot(means, plot_dir, freq='daily', rolling=14):
 
     for idx, (name, col) in enumerate(zip(names, cols)):
         for place, place_means in means.items():
-            _ = axes[idx].plot(place_means[freq].index, place_means[freq][col].rolling(rolling, center=True).mean(), c=place2color[place], alpha=1, label=place.upper())
+            _ = axes[idx].plot(place_means[freq].index, place_means[freq][col].rolling(rolling, center=True).mean(), c=place2color.get(place), alpha=1, label=place.upper())
 
         axes[idx] = utils.apply_mdates(axes[idx], place_means[freq].index, 'month')
         _ = axes[idx].legend(loc=1)
@@ -95,6 +95,8 @@ def get_color_dict():
     place2color['london'] = 'red'  ## red lion
     place2color['christchurch'] = 'black'  ## all blacks
     place2color['denver'] = 'blue'  ## broncos
+    place2color['auckland'] = 'green'  ## out of ideas
+
     return place2color
 
 
